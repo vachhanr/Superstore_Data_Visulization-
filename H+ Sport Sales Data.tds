@@ -1,0 +1,957 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20192.19.0515.1630                               -->
+<datasource formatted-name='H+ Sport Sales Data' inline='true' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <connection class='federated'>
+    <named-connections>
+      <named-connection caption='H+ Sport Employee Tables_LYNDA_35482' name='excel-direct.1nco7y10sl4g4r1fgcu2617iijtn'>
+        <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='/Users/mdf/Desktop/H+ Sport Employee Tables_LYNDA_35482.xlsx' interpretationMode='1' password='' server='' validate='no' />
+      </named-connection>
+    </named-connections>
+    <relation join='inner' type='join'>
+      <clause type='join'>
+        <expression op='='>
+          <expression op='[ Sales].[Salesperson]' />
+          <expression op='[Employees].[Employee Name]' />
+        </expression>
+      </clause>
+      <relation connection='excel-direct.1nco7y10sl4g4r1fgcu2617iijtn' name=' Sales' table='[&apos; Sales$&apos;]' type='table'>
+        <columns gridOrigin='A3:H917:no:A3:H917:1' header='no' lost='0' outcome='1' processed='3636'>
+          <column datatype='string' name='Salesperson' ordinal='0' />
+          <column datatype='string' name='Product' ordinal='1' />
+          <column datatype='string' name='Region' ordinal='2' />
+          <column datatype='string' name='Customer' ordinal='3' />
+          <column datatype='date' name='Date' ordinal='4' />
+          <column datatype='integer' name='Item Cost' ordinal='5' />
+          <column datatype='integer' name='No.Items' ordinal='6' />
+          <column datatype='integer' name='Total Cost' ordinal='7' />
+        </columns>
+      </relation>
+      <relation connection='excel-direct.1nco7y10sl4g4r1fgcu2617iijtn' name='Employees' table='[Employees$]' type='table'>
+        <columns gridOrigin='A1:AE742:no:A1:AE742:1' lost='0' outcome='1' processed='3044'>
+          <column datatype='string' name='Employee Name' ordinal='0' />
+          <column datatype='string' name='Building' ordinal='1' />
+          <column datatype='string' name='Department' ordinal='2' />
+          <column datatype='string' name='Status' ordinal='3' />
+          <column datatype='date' name='Hire Date' ordinal='4' />
+          <column datatype='string' name='Month' ordinal='5' />
+          <column datatype='integer' name='Years' ordinal='6' />
+          <column datatype='string' name='Benefits' ordinal='7' />
+          <column datatype='integer' name='Salary' ordinal='8' />
+          <column datatype='integer' name='Job Rating' ordinal='9' />
+          <column datatype='real' name='New Salary' ordinal='10' />
+          <column datatype='real' name='Tax Rate' ordinal='11' />
+          <column datatype='real' name='2.91%' ordinal='12' />
+          <column datatype='real' name='F14' ordinal='13' />
+          <column datatype='real' name='F15' ordinal='14' />
+          <column datatype='integer' name='TaxTable' ordinal='15' />
+          <column datatype='real' name='F17' ordinal='16' />
+          <column datatype='real' name='F18' ordinal='17' />
+          <column datatype='string' name='F19' ordinal='18' />
+          <column datatype='integer' name='CA' ordinal='19' />
+          <column datatype='integer' name='TX' ordinal='20' />
+          <column datatype='integer' name='NY' ordinal='21' />
+          <column datatype='integer' name='FL' ordinal='22' />
+          <column datatype='integer' name='IL' ordinal='23' />
+          <column datatype='real' name='F25' ordinal='24' />
+          <column datatype='string' name='F26' ordinal='25' />
+          <column datatype='integer' name='CA 1' ordinal='26' />
+          <column datatype='integer' name='TX 1' ordinal='27' />
+          <column datatype='integer' name='NY 1' ordinal='28' />
+          <column datatype='integer' name='FL 1' ordinal='29' />
+          <column datatype='integer' name='IL 1' ordinal='30' />
+        </columns>
+      </relation>
+    </relation>
+    <metadata-records>
+      <metadata-record class='column'>
+        <remote-name>Salesperson</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Salesperson]</local-name>
+        <parent-name>[ Sales]</parent-name>
+        <remote-alias>Salesperson</remote-alias>
+        <ordinal>0</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Product</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Product]</local-name>
+        <parent-name>[ Sales]</parent-name>
+        <remote-alias>Product</remote-alias>
+        <ordinal>1</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Region</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Region]</local-name>
+        <parent-name>[ Sales]</parent-name>
+        <remote-alias>Region</remote-alias>
+        <ordinal>2</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Customer</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Customer]</local-name>
+        <parent-name>[ Sales]</parent-name>
+        <remote-alias>Customer</remote-alias>
+        <ordinal>3</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[Date]</local-name>
+        <parent-name>[ Sales]</parent-name>
+        <remote-alias>Date</remote-alias>
+        <ordinal>4</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Item Cost</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Item Cost]</local-name>
+        <parent-name>[ Sales]</parent-name>
+        <remote-alias>Item Cost</remote-alias>
+        <ordinal>5</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>No.Items</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[No.Items]</local-name>
+        <parent-name>[ Sales]</parent-name>
+        <remote-alias>No.Items</remote-alias>
+        <ordinal>6</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Total Cost</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Total Cost]</local-name>
+        <parent-name>[ Sales]</parent-name>
+        <remote-alias>Total Cost</remote-alias>
+        <ordinal>7</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='capability'>
+        <remote-name />
+        <remote-type>0</remote-type>
+        <parent-name>[ Sales]</parent-name>
+        <remote-alias />
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='integer' name='context'>2</attribute>
+          <attribute datatype='string' name='gridOrigin'>&quot;A3:H917:no:A3:H917:1&quot;</attribute>
+          <attribute datatype='integer' name='lost'>0</attribute>
+          <attribute datatype='integer' name='outcome'>1</attribute>
+          <attribute datatype='integer' name='processed'>3636</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Employee Name</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Employee Name]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>Employee Name</remote-alias>
+        <ordinal>8</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Building</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Building]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>Building</remote-alias>
+        <ordinal>9</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Department</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Department]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>Department</remote-alias>
+        <ordinal>10</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Status</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Status]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>Status</remote-alias>
+        <ordinal>11</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Hire Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[Hire Date]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>Hire Date</remote-alias>
+        <ordinal>12</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Month</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Month]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>Month</remote-alias>
+        <ordinal>13</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Years</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Years]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>Years</remote-alias>
+        <ordinal>14</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Benefits</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Benefits]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>Benefits</remote-alias>
+        <ordinal>15</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Salary</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Salary]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>Salary</remote-alias>
+        <ordinal>16</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Job Rating</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Job Rating]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>Job Rating</remote-alias>
+        <ordinal>17</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>New Salary</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[New Salary]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>New Salary</remote-alias>
+        <ordinal>18</ordinal>
+        <hidden>true</hidden>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Tax Rate</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Tax Rate]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>Tax Rate</remote-alias>
+        <ordinal>19</ordinal>
+        <hidden>true</hidden>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>2.91%</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[2.91%]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>2.91%</remote-alias>
+        <ordinal>20</ordinal>
+        <hidden>true</hidden>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>F14</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[F14]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>F14</remote-alias>
+        <ordinal>21</ordinal>
+        <hidden>true</hidden>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>F15</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[F15]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>F15</remote-alias>
+        <ordinal>22</ordinal>
+        <hidden>true</hidden>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>TaxTable</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[TaxTable]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>TaxTable</remote-alias>
+        <ordinal>23</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>F17</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[F17]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>F17</remote-alias>
+        <ordinal>24</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>F18</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[F18]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>F18</remote-alias>
+        <ordinal>25</ordinal>
+        <hidden>true</hidden>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>F19</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[F19]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>F19</remote-alias>
+        <ordinal>26</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>CA</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[CA]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>CA</remote-alias>
+        <ordinal>27</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>TX</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[TX]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>TX</remote-alias>
+        <ordinal>28</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>NY</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[NY]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>NY</remote-alias>
+        <ordinal>29</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>FL</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[FL]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>FL</remote-alias>
+        <ordinal>30</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>IL</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[IL]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>IL</remote-alias>
+        <ordinal>31</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>F25</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[F25]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>F25</remote-alias>
+        <ordinal>32</ordinal>
+        <hidden>true</hidden>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>F26</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[F26]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>F26</remote-alias>
+        <ordinal>33</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>CA 1</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[CA 1]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>CA 1</remote-alias>
+        <ordinal>34</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>TX 1</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[TX 1]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>TX 1</remote-alias>
+        <ordinal>35</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>NY 1</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[NY 1]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>NY 1</remote-alias>
+        <ordinal>36</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>FL 1</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[FL 1]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>FL 1</remote-alias>
+        <ordinal>37</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>IL 1</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[IL 1]</local-name>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias>IL 1</remote-alias>
+        <ordinal>38</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='capability'>
+        <remote-name />
+        <remote-type>0</remote-type>
+        <parent-name>[Employees]</parent-name>
+        <remote-alias />
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='integer' name='context'>0</attribute>
+          <attribute datatype='string' name='gridOrigin'>&quot;A1:AE742:no:A1:AE742:1&quot;</attribute>
+          <attribute datatype='integer' name='lost'>0</attribute>
+          <attribute datatype='integer' name='outcome'>1</attribute>
+          <attribute datatype='integer' name='processed'>3044</attribute>
+        </attributes>
+      </metadata-record>
+    </metadata-records>
+  </connection>
+  <aliases enabled='yes' />
+  <column datatype='real' hidden='true' name='[2.91%]' role='measure' type='quantitative' />
+  <column caption='Ca 1' datatype='integer' hidden='true' name='[CA 1]' role='measure' type='quantitative' />
+  <column datatype='integer' hidden='true' name='[CA]' role='measure' type='quantitative' />
+  <column caption='Employee Salary' datatype='integer' name='[Calculation_297237641932914688]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='{ FIXED [Salesperson]: MAX([Salary])}' />
+  </column>
+  <column caption='Employee Job Rating' datatype='integer' name='[Employee Salary (copy)]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='{ FIXED [Salesperson]: MAX([Job Rating])}' />
+  </column>
+  <column datatype='real' hidden='true' name='[F14]' role='measure' type='quantitative' />
+  <column datatype='real' hidden='true' name='[F15]' role='measure' type='quantitative' />
+  <column datatype='real' hidden='true' name='[F17]' role='measure' type='quantitative' />
+  <column datatype='real' hidden='true' name='[F18]' role='measure' type='quantitative' />
+  <column datatype='string' hidden='true' name='[F19]' role='dimension' type='nominal' />
+  <column datatype='real' hidden='true' name='[F25]' role='measure' type='quantitative' />
+  <column datatype='string' hidden='true' name='[F26]' role='dimension' type='nominal' />
+  <column caption='Fl 1' datatype='integer' hidden='true' name='[FL 1]' role='measure' type='quantitative' />
+  <column datatype='integer' hidden='true' name='[FL]' role='measure' type='quantitative' />
+  <column caption='Il 1' datatype='integer' hidden='true' name='[IL 1]' role='measure' type='quantitative' />
+  <column datatype='integer' hidden='true' name='[IL]' role='measure' type='quantitative' />
+  <column datatype='integer' hidden='true' name='[Job Rating]' role='measure' type='quantitative' />
+  <column caption='Ny 1' datatype='integer' hidden='true' name='[NY 1]' role='measure' type='quantitative' />
+  <column datatype='integer' hidden='true' name='[NY]' role='measure' type='quantitative' />
+  <column datatype='real' hidden='true' name='[New Salary]' role='measure' type='quantitative' />
+  <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+    <calculation class='tableau' formula='1' />
+  </column>
+  <column datatype='integer' hidden='true' name='[Salary]' role='measure' type='quantitative' />
+  <column caption='Tx 1' datatype='integer' hidden='true' name='[TX 1]' role='measure' type='quantitative' />
+  <column datatype='integer' hidden='true' name='[TX]' role='measure' type='quantitative' />
+  <column datatype='real' hidden='true' name='[Tax Rate]' role='measure' type='quantitative' />
+  <column caption='Tax Table' datatype='integer' hidden='true' name='[TaxTable]' role='measure' type='quantitative' />
+  <extract count='-1' enabled='true' units='records'>
+    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='/Users/mattfrancis/Documents/My Tableau Repository/Datasources/2019.2/en_US-US/H+Sport Sales.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='06/05/2019 05:47:27 AM' username='tableau_internal_user'>
+      <relation name='Extract' table='[Extract].[Extract]' type='table' />
+      <refresh>
+        <refresh-event add-from-file-path='Sales+ (H+ Sport Employee Tables_LYNDA_35482)' increment-value='%null%' refresh-type='create' rows-inserted='909' timestamp-start='2019-06-05 05:47:27.137' />
+      </refresh>
+      <metadata-records>
+        <metadata-record class='column'>
+          <remote-name>Salesperson</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Salesperson]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Salesperson</remote-alias>
+          <ordinal>0</ordinal>
+          <family> Sales</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>12</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RGB_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Product</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Product]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Product</remote-alias>
+          <ordinal>1</ordinal>
+          <family> Sales</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>5</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RGB_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Region</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Region]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Region</remote-alias>
+          <ordinal>2</ordinal>
+          <family> Sales</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>4</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RGB_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Customer</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Customer]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Customer</remote-alias>
+          <ordinal>3</ordinal>
+          <family> Sales</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>5</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RGB_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Date</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[Date]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Date</remote-alias>
+          <ordinal>4</ordinal>
+          <family> Sales</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>449</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Item Cost</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Item Cost]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Item Cost</remote-alias>
+          <ordinal>5</ordinal>
+          <family> Sales</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>4</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>No.Items</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[No.Items]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>No.Items</remote-alias>
+          <ordinal>6</ordinal>
+          <family> Sales</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>20</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Total Cost</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Total Cost]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Total Cost</remote-alias>
+          <ordinal>7</ordinal>
+          <family> Sales</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>80</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Employee Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Employee Name]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Employee Name</remote-alias>
+          <ordinal>8</ordinal>
+          <family>Employees</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>12</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RGB_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Building</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Building]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Building</remote-alias>
+          <ordinal>9</ordinal>
+          <family>Employees</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>5</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RGB_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Department</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Department]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Department</remote-alias>
+          <ordinal>10</ordinal>
+          <family>Employees</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>1</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RGB_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Status</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Status]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Status</remote-alias>
+          <ordinal>11</ordinal>
+          <family>Employees</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>4</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RGB_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Hire Date</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[Hire Date]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Hire Date</remote-alias>
+          <ordinal>12</ordinal>
+          <family>Employees</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>12</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Month</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Month]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Month</remote-alias>
+          <ordinal>13</ordinal>
+          <family>Employees</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>6</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RGB_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Years</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Years]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Years</remote-alias>
+          <ordinal>14</ordinal>
+          <family>Employees</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>9</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Benefits</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Benefits]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Benefits</remote-alias>
+          <ordinal>15</ordinal>
+          <family>Employees</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>4</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RGB_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Salary</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Salary]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Salary</remote-alias>
+          <ordinal>16</ordinal>
+          <family>Employees</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>12</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Job Rating</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Job Rating]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Job Rating</remote-alias>
+          <ordinal>17</ordinal>
+          <family>Employees</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>4</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+      </metadata-records>
+    </connection>
+  </extract>
+  <layout dim-ordering='alphabetic' dim-percentage='0.595376' measure-ordering='alphabetic' measure-percentage='0.404624' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+  </semantic-values>
+  <date-options start-of-week='monday' />
+</datasource>
